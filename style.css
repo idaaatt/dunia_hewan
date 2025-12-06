@@ -179,6 +179,8 @@ nav a:hover, nav a.active {
   font-size: 1rem;
   transition: background 0.3s, transform 0.2s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  min-width: 120px;
+  text-align: center;
 }
 
 .back-btn a:hover {
@@ -195,8 +197,8 @@ nav a:hover, nav a.active {
 /* Kategori Grid */
 .kategori-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
   padding: 0 1.5rem 2rem;
   max-width: 1000px;
   margin: 1rem auto;
@@ -204,13 +206,13 @@ nav a:hover, nav a.active {
 
 .kategori-item {
   display: block;
-  height: 180px;
+  height: 160px;
   border-radius: 12px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  line-height: 180px;
+  line-height: 160px;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
@@ -232,7 +234,7 @@ nav a:hover, nav a.active {
 
 .kategori-item h2 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   position: relative;
   z-index: 2;
@@ -243,11 +245,11 @@ nav a:hover, nav a.active {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* Galeri Hewan - Gaya Kategori (teks di atas gambar) */
+/* Galeri Hewan - Gaya Kategori */
 .galeri-overlay {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
   padding: 0 1.5rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -255,13 +257,13 @@ nav a:hover, nav a.active {
 
 .galeri-item {
   display: block;
-  height: 180px;
+  height: 160px;
   border-radius: 12px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  line-height: 180px;
+  line-height: 160px;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
@@ -287,7 +289,7 @@ nav a:hover, nav a.active {
   letter-spacing: 0.5px;
   position: relative;
   z-index: 2;
-  line-height: 180px;
+  line-height: 160px;
 }
 
 .galeri-item:hover {
@@ -350,25 +352,19 @@ footer {
   color: #2980b9;
 }
 
-/* Tentang */
 .tentang-page {
   background: #f3e5f5;
   padding-bottom: 2rem;
 }
 
-/* Responsive */
-/* 📱 RESPONSIVE UNTUK SEMUA PERANGKAT */
+/* 📱 RESPONSIVE UNTUK MOBILE */
 @media (max-width: 768px) {
-  /* Container */
-  .container {
-    padding: 0 1rem;
-  }
-
-  /* Navigation */
+  /* Navigation jadi center */
   nav .container {
     flex-direction: column;
     gap: 0.8rem;
     padding: 0.8rem 1rem;
+    text-align: center;
   }
 
   nav ul {
@@ -400,30 +396,6 @@ footer {
     margin: 0.5rem auto;
   }
 
-  /* Why Learn */
-  .why-learn {
-    padding: 2rem 1rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* CTA */
-  .cta {
-    padding: 2rem 1rem;
-  }
-
-  .cta h2 {
-    font-size: 1.8rem;
-  }
-
-  .btn-primary {
-    padding: 0.7rem 1.5rem;
-    font-size: 1rem;
-  }
-
   /* Kategori & Galeri */
   .kategori-grid,
   .galeri-overlay {
@@ -434,56 +406,26 @@ footer {
 
   .kategori-item,
   .galeri-item {
-    height: 150px;
+    height: 140px;
+    line-height: 140px;
     border-radius: 10px;
-    line-height: 150px;
   }
 
   .kategori-item h2,
   .galeri-item h3 {
     font-size: 1.15rem;
-    line-height: 150px;
-  }
-
-  /* Detail Hewan */
-  .detail-container {
-    padding: 0 1rem;
-  }
-
-  .detail-title {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-  }
-
-  .info-box {
-    padding: 1.2rem;
-  }
-
-  .info-box h3 {
-    font-size: 1.2rem;
-  }
-
-  .info-box p {
-    font-size: 1rem;
+    line-height: 140px;
   }
 
   /* Back Button */
   .back-btn a {
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1rem;
     font-size: 1rem;
-  }
-
-  /* Footer */
-  footer {
-    padding: 0.8rem 0;
-  }
-
-  .footer-content p {
-    font-size: 0.85rem;
+    min-width: 100px;
   }
 }
 
-/* 📱 HP KECIL (max-width: 480px) */
+/* 📱 HP SANGAT KECIL */
 @media (max-width: 480px) {
   .kategori-grid,
   .galeri-overlay {
@@ -493,28 +435,23 @@ footer {
 
   .kategori-item,
   .galeri-item {
-    height: 130px;
-    line-height: 130px;
+    height: 120px;
+    line-height: 120px;
     border-radius: 8px;
   }
 
   .kategori-item h2,
   .galeri-item h3 {
     font-size: 1.1rem;
-    line-height: 130px;
+    line-height: 120px;
   }
 
   .hero h1 {
     font-size: 1.8rem;
   }
 
-  .btn-primary,
   .back-btn a {
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 0.9rem;
     font-size: 0.95rem;
-  }
-
-  .detail-title {
-    font-size: 1.6rem;
   }
 }
